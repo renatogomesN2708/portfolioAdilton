@@ -1,22 +1,25 @@
-
+/* Resetando margens e paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo geral da página */
 body {
     background-color: #000000;
     color: #fff;
     margin: 50px;
 }
 
+/* Ajuste nas imagens */
 img {
     width: 500px;
     height: 450px;
     border-radius: 50%;
 }
 
+/* Ajuste nos títulos */
 h1 {
     font-size: 80px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -34,7 +37,7 @@ label {
     color: orangered;
     font-size: 45px;
 }
-
+/* Links */
 a {
     text-decoration: none;
 }
@@ -43,6 +46,7 @@ a:hover {
     cursor: pointer;
 }
 
+/* Centralização do conteúdo */
 section {
     display: grid;
     place-items: center;
@@ -50,6 +54,7 @@ section {
     min-height: 100vh;
 }
 
+/* Ajustes para a seção de introdução */
 .beggin p {
     text-align: center;
     font-size: 40px;
@@ -59,24 +64,27 @@ section {
     padding: 20px;
 }
 
+/* Transições de visibilidade */
 .hidden {
     opacity: 0;
     filter: blur(15px);
     transform: translateX(-100%);
-    transition: all 1s;
+    transition: all 1s ease;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0%);
-    transition: all 1s;
+    transform: translateX(0);
+    transition: all 1s ease;
 }
 
+
+/* Estilo da seção de resultados */
 .resultados {
     gap: 20px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que os cards se adaptem quando necessário */
     justify-content: center;
     margin-top: 30px;
 }
@@ -109,12 +117,13 @@ section {
     margin: 5px;
 }
 
+/* Estilo para os planos */
 .planos {
     display: flex;
     gap: 50px;
     align-items: center;
     text-align: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que os planos se adaptem quando necessário */
 }
 
 .card-price {
@@ -158,31 +167,40 @@ section {
     cursor: pointer;
 }
 
-/* Responsividade */
+/* Responsividade (aplicada apenas em telas menores) */
 @media (max-width: 1024px) {
+    /* Para tablets ou telas menores */
     body {
         margin: 20px;
     }
 
     h1 {
-        font-size: 60px;
+        font-size: 60px; /* Ajustando o tamanho do título */
     }
 
     h2 {
-        font-size: 80px;
+        font-size: 80px; /* Ajustando o tamanho dos subtítulos */
     }
 
     p {
-        font-size: 40px;
+        font-size: 40px; /* Ajustando o tamanho do texto */
     }
 
     img {
         width: 100%;
         height: auto;
     }
+    .beggin {
+        p {
+            font-size: 25px;
+        }
+        label {
+            font-size: 30px;
+        }
+    }
 
     .planos {
-        flex-direction: column;
+        flex-direction: column; /* Organizando os planos em coluna */
         gap: 20px;
     }
 
@@ -200,17 +218,21 @@ section {
 
     .resultados {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Grid adaptável */
     }
 
     .card {
         width: 100%;
         height: auto;
         padding: 20px;
+        h2 {
+            color: orangered;
+        }
     }
 }
 
 @media (max-width: 480px) {
+    /* Para telas de smartphones */
     .beggin {
         img{ 
             width: 250px;
@@ -219,14 +241,17 @@ section {
             margin-top: 70px;
         }
     }
-
     h1 {
         text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
         font-size: 40px;
     }
 
     h2 {
         font-size: 60px;
+        margin-top: 50px;
+        margin-bottom: 80px;
     }
 
     p {
@@ -234,20 +259,57 @@ section {
     }
 
     .planos .card-price {
-        width: 90%;
+        width: 90%; /* Ajustando largura para planos */
+        height: auto;
     }
 
     .card-price h1 {
-        font-size: 45px;
+        font-size: 45px; /* Tamanho do título nos planos */
     }
 
     .card-price p {
-        font-size: 25px;
+        font-size: 25px; /* Tamanho da descrição dos planos */
     }
 
     .btn {
         width: 140px;
+        font-size: 25px;
         height: 50px;
-        font-size: 20px;
     }
+    .btn:hover {
+        cursor: pointer;
+        color: orangered;
+        background-color: white;
+        border: 1px solid orangered;
+        transform: translateY(-10px);
+        transition: all 1s;
+    }
+
+    .resultados {
+        display: grid;
+        grid-template-columns: 1fr; /* Colocando os depoimentos em uma coluna */
+        width: 25%;
+        height: auto;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+
+        p {
+            font-size: 25px;
+            margin-top: -70px;
+        }
+        h2 {
+            font-size: 35px;
+        }
+    }
+
+    .avatar {
+        width: 200px; /* Reduzindo o tamanho das imagens */
+        height: 180px;
+    }
+
+ 
 }
