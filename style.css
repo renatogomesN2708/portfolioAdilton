@@ -1,25 +1,22 @@
-/* Resetando margens e paddings */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo geral da página */
 body {
     background-color: #000000;
     color: #fff;
     margin: 50px;
 }
 
-/* Ajuste nas imagens */
 img {
     width: 500px;
     height: 450px;
     border-radius: 50%;
 }
 
-/* Ajuste nos títulos */
 h1 {
     font-size: 80px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -38,7 +35,6 @@ label {
     font-size: 45px;
 }
 
-/* Links */
 a {
     text-decoration: none;
 }
@@ -47,7 +43,6 @@ a:hover {
     cursor: pointer;
 }
 
-/* Centralização do conteúdo */
 section {
     display: grid;
     place-items: center;
@@ -55,7 +50,6 @@ section {
     min-height: 100vh;
 }
 
-/* Ajustes para a seção de introdução */
 .beggin p {
     text-align: center;
     font-size: 40px;
@@ -65,7 +59,6 @@ section {
     padding: 20px;
 }
 
-/* Transições de visibilidade */
 .hidden {
     opacity: 0;
     filter: blur(15px);
@@ -80,7 +73,6 @@ section {
     transition: all 1s;
 }
 
-/* Estilo da seção de resultados */
 .resultados {
     gap: 20px;
     display: flex;
@@ -117,7 +109,6 @@ section {
     margin: 5px;
 }
 
-/* Estilo para os planos */
 .planos {
     display: flex;
     gap: 50px;
