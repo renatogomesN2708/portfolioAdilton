@@ -381,8 +381,8 @@ section {
     /* Para telas de smartphones */
     .beggin {
         img{ 
-            width: 250px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             margin-top: 70px;
         }
