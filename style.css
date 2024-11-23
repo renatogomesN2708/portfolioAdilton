@@ -168,6 +168,63 @@ section {
 }
 
 /* Responsividade (aplicada apenas em telas menores) */
+@media (max-width: 1650px){
+     .planos {
+        flex-direction: column; /* Organizando os planos em coluna */
+        gap: 20px;
+    }
+
+    .card-price {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .btn {
+        width: 80%;
+        font-size: 30px;
+        height: 50px;
+    }
+
+    .resultados {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Grid adaptável */
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        h2 {
+            color: orangered;
+        }
+    }
+
+}
+
+@media (max-width:1465px) {
+    .resultados {
+        display: flex;
+        width: 25%;
+        height: auto;
+    }
+
+    
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        h2 {
+            color: orangered;
+        }
+    }
+
+    .avatar {
+        width: 200px; /* Reduzindo o tamanho das imagens */
+        height: 180px;
+    }
+}
+
 @media (max-width: 1024px) {
     /* Para tablets ou telas menores */
     body {
@@ -229,6 +286,86 @@ section {
             color: orangered;
         }
     }
+}
+@media (max-width: 1024px) {
+    .beggin {
+        img{ 
+            width: 250px;
+            height: 220px;
+            border-radius: 50%;
+            margin-top: 70px;
+        }
+    }
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 60px;
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    .planos .card-price {
+        width: 90%; /* Ajustando largura para planos */
+        height: auto;
+    }
+
+    .card-price h1 {
+        font-size: 45px; /* Tamanho do título nos planos */
+    }
+
+    .card-price p {
+        font-size: 25px; /* Tamanho da descrição dos planos */
+    }
+
+    .btn {
+        width: 140px;
+        font-size: 25px;
+        height: 50px;
+    }
+    .btn:hover {
+        cursor: pointer;
+        color: orangered;
+        background-color: white;
+        border: 1px solid orangered;
+        transform: translateY(-10px);
+        transition: all 1s;
+    }
+
+    .resultados {
+        display: grid;
+        grid-template-columns: 1fr; /* Colocando os depoimentos em uma coluna */
+        width: 25%;
+        height: auto;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+
+        p {
+            font-size: 25px;
+            margin-top: -70px;
+        }
+        h2 {
+            font-size: 35px;
+        }
+    }
+
+    .avatar {
+        width: 200px; /* Reduzindo o tamanho das imagens */
+        height: 180px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -312,4 +449,15 @@ section {
     }
 
  
+}
+@media (max-width: 300px) {
+    .beggin {
+        display: flex;
+        flex-direction: column;
+    }
+    .hidden {
+        h2 {
+            font-size: 40px;
+        }
+    }
 }
