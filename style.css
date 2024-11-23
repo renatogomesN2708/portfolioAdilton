@@ -169,6 +169,15 @@ section {
 
 /* Responsividade (aplicada apenas em telas menores) */
 @media (max-width: 1650px){
+    .beggin {
+        img {
+        width: 700px;
+        height: 650px;
+       }
+       p {
+        font-size: 45px;
+       }
+    }
      .planos {
         flex-direction: column; /* Organizando os planos em coluna */
         gap: 20px;

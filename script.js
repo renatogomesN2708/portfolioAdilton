@@ -33,9 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Codifica a mensagem para o formato de URL
             let encodedMsg = encodeURIComponent(msg);
+            console.log(`Mensagem codificada: ${encodedMsg}`); // Depuração: Verifique a mensagem codificada
 
             // Adiciona um pequeno atraso (300ms) antes de abrir o link do WhatsApp
             setTimeout(() => {
+                // Depuração: Verifique o link final que será aberto
+                console.log(`Abrindo link do WhatsApp: https://wa.me/558587119838?text=${encodedMsg}`);
+                
+                // Redireciona para o WhatsApp com a mensagem codificada
                 window.open(`https://wa.me/558587119838?text=${encodedMsg}`, "_blank");
             }, 300);
         });
